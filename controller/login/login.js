@@ -12,7 +12,7 @@ export const login=async(req,res)=>{
         if(data.password!=datalogin.password){
             return res.status(200).json({success:false,description:'Note: Vui lòng kiểm tra lại Email và PassWord!'})
         }
-        res.status(200).json({success:true})
+        res.status(200).json({success:true,data})
     }
     catch (err) {
         console.log({erro:err});
